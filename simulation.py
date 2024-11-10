@@ -7,7 +7,7 @@ class TargetSystem:
         self.queue = []
         self.target_password = target_password
 
-        #metric variables
+        # metric variables and/or other parameters
         self.total_wait_time = 0
         self.measure_queue_length = []
         self.processed_passwords = 0
@@ -55,33 +55,6 @@ class AttackSystem:
                 arrival_time = self.env.now
                 self.target_system.queue.append((password, arrival_time))
                 yield self.env.timeout(1 / self.arrival_rate)
-
-        # chars = "abcdefghijklmnopqrstuvwxyz0123456789"
-        # max_length = 3
-
-        # list_all_combination = []
-
-        # for length in range(1, max_length + 1):
-        #     word = itertools.permutations(chars, length)
-
-            # for combination in word:
-            #     password = ''.join(combination)
-            #     arrival_time = self.env.now
-            #     self.target_system.queue.append((password, arrival_time))
-            #     yield self.env.timeout(1 / self.arrival_rate)
-
-
-    
-        #     y = [''.join(i) for i in word]
-
-        #     for combination in y:
-        #         list_all_combination.append(combination)
-
-        # random.shuffle(list_all_combination)
-        # for password in list_all_combination:
-        #     yield self.env.timeout(1 /self.arrival_rate)
-        #     arrival_time = self.env.now
-        #     self.target_system.queue.append((password, arrival_time))
     
 if __name__ == "__main__":
     env = simpy.Environment()
