@@ -11,11 +11,8 @@ class TargetSystem:
 
         #metric variables
         self.total_wait_time = 0
-        self.total_passwords = 0
         self.measure_queue_length = []
         self.processed_passwords = 0
-        self.server_utilization_time = 0
-        self.server_active_time = 0
 
         # start methods as a separate process within environment
         self.env.process(self.process_password())
