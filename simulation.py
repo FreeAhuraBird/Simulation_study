@@ -62,8 +62,8 @@ if __name__ == "__main__":
 
     # variables
     arrival_rate = 1000
-    service_rate = 100
-    target_password = "ul8q"
+    service_rate = 1000
+    target_password = "test"
 
     generatedPass_file = "four_characters.txt"
 
